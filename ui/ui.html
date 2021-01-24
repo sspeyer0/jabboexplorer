@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/ui.css">
+    <title>JabboExplorer</title>
+  <body>
+    <main class="container">
+
+      <aside class="services">
+
+        <div class="service service-jabbo" id="jabbo">
+            <div class="service-icon"><img src="imgs/services/jabbo.png" onclick="openService('jabbo')"></div>
+        </div>
+
+          <div id="opened-services"></div>
+
+        <div class="service" id="open">
+            <div class="service-icon"><img src="imgs/icons/services/open.png" onclick="openService('open')"></div>
+        </div>
+
+      </aside>
+      
+      <aside class="banner" id="banner">
+        <img class="discord" src="https://discordapp.com/api/guilds/600840394011443201/widget.png?style=banner4">
+        <div class="banner-hide" onclick="hideBanner()">
+          <img src="imgs/icons/banner/close.png"/> FERMER
+        </div>
+      </aside>
+      
+      <div class="tab" id="jabbo">
+        <webview class="webview-full" src="https://www.jabbo.eu/" plugins></webview>
+      </div>
+
+        <div id="opened-tabs"></div>
+
+      <div class="tab" id="open">
+          <div class="open-services">
+            <div class="banner-services">Ouvrir un service</div>
+            <div class="alert">Les services externes disponibles sur JabboExplorer peuvent évoluer au fil du temps, nous vous informerons lorsqu'une mise à jour du navigateur est disponible.</div>
+            <div class="services-list" id="services-list"></div>
+          </div>
+        </div>
+
+    </main>
+
+    <script src="js/ui.js"></script>
+  </body>
+</html>
